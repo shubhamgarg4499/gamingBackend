@@ -8,8 +8,8 @@ const cors = require("cors")
 // app.use(JSON.parse())
 connectDB()
 app.use(cors({
-    origin: "https://cloudgame.netlify.app",
-    credentials: true
+    // origin: "https://cloudgame.netlify.app",
+    // credentials: true
 }))
 app.use(express.json())
 app.get('/getgames', async (req, res, next) => {
