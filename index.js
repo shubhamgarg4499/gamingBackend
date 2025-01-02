@@ -8,7 +8,7 @@ const cors = require("cors")
 // app.use(JSON.parse())
 connectDB()
 app.use(cors({
-    origin: "https://cloudgame.netlify.app",
+    origin: ["https://cloudgame.netlify.app", "https://cloud-gaming-omega.vercel.app", ["http://localhost:5173/"]],
     credentials: true
 }))
 app.use(express.json())
