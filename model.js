@@ -99,4 +99,54 @@ const userSchema = new Schema({
 }, { timestamps: true })
 
 const user = mongoose.model("user", userSchema)
-module.exports = { games, user }
+
+
+
+
+const gameMonetizeSchema = new mongoose.Schema({
+
+    id: {
+        type: String,
+        required: true
+    },
+    title: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    instructions: {
+        type: String,
+        required: true
+    },
+    url: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    tags: {
+        type: String, // Comma-separated list of tags
+        required: true
+    },
+    thumb: {
+        type: String,
+        required: true
+    },
+    width: {
+        type: String,
+        required: true
+    },
+    height: {
+        type: String,
+        required: true
+    }
+});
+const gameMonetize = mongoose.model("gameMonetize", gameMonetizeSchema)
+
+
+module.exports = { games, user, gameMonetize }
